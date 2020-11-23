@@ -1,8 +1,9 @@
 import { useRef, useState, useEffect } from "react"
+import CardStyle from "./styles/CardStyle"
 
 const { tableau } = window
 
-export default function Kpi({ dashboard }) {
+export default function Card({ dashboard }) {
   const ref = useRef(null)
   const [viz, setViz] = useState(null)
 
@@ -12,12 +13,16 @@ export default function Kpi({ dashboard }) {
       new tableau.Viz(ref.current, `${dashboard}`, {
         hideTabs: true,
         hideToolbar: true,
-        width: "500px",
-        height: "300px",
+        width: "290px",
+        height: "180px",
       })
     )
     return () => viz.dispose()
   }, [])
 
-  return <div className="__kpi_dashboard" ref={ref} />
+  return (
+    <CardStyle>
+      <div className="__kpi_dashboard" ref={ref} />
+    </CardStyle>
+  )
 }

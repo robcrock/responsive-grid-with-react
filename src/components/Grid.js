@@ -1,18 +1,13 @@
 import dashboards from "../utils/dashboards"
-import Kpi from "./Kpi"
+import Card from "./Card"
+import GridStyle from "./styles/GridStyle"
 
 export default function Grid() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        maxWidth: "100%",
-      }}
-    >
+    <GridStyle>
       {dashboards.map((dashboard) => (
-        <Kpi dashboard={dashboard} />
+        <Card dashboard={dashboard} />
       ))}
-    </div>
+    </GridStyle>
   )
 }
