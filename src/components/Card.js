@@ -15,7 +15,7 @@ export default function Card({ dashboard }) {
     })
 
     return viz;
-  }, [])
+  })
 
   return (
     <CardStyle>
