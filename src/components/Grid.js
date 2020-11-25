@@ -1,6 +1,6 @@
 import dashboards from "../utils/dashboards"
 import Card from "./Card"
-import GridStyle from "./styles/GridStyle"
+import GridStyle from "../styles/GridStyle"
 import { v4 as uuidv4 } from "uuid"
 
 export default function Grid() {

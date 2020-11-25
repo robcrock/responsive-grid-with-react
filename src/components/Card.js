@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import CardStyle from "./styles/CardStyle"
+import CardStyle from "../styles/CardStyle"
 
 const { tableau } = window
 
