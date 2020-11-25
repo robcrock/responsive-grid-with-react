@@ -9,6 +9,7 @@ export default function Card({ dashboard }) {
 
   useEffect(() => {
     console.dir("Loading " + dashboard)
+
     setViz(
       new tableau.Viz(ref.current, `${dashboard}`, {
         hideTabs: true,
@@ -17,12 +18,13 @@ export default function Card({ dashboard }) {
         height: "180px",
       })
     )
+
     return () => viz.dispose()
   }, [])
 
   return (
     <CardStyle>
-      <div className="__kpi_dashboard" ref={ref} />
+      <div ref={ref} />
     </CardStyle>
   )
 }
